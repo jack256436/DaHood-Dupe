@@ -1,0 +1,70 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "DaHood Dupe", HidePremium = true, SaveConfig = false, IntroEnabled = false, ConfigFolder = "DaHood Dupe"})
+
+OrionLib:MakeNotification({
+    Name = "Loaded",
+    Content = "Successfully Loaded",
+    Image = "rbxassetid://8950621656",
+    Time = 5
+})
+
+local Main = Window:MakeTab({
+    Name = "DaHood Dupe",
+    Icon = "rbxassetid://8950621656",
+    PremiumOnly = false
+})
+Main:AddButton({
+    Name = "Crash Start",
+    Callback = function()
+              getgenv().fpsBoost = false
+              getgenv().Active = true --Toggle true or false
+              getgenv().CrashAmmount = 1500 --The more you add the better
+              --[[ Theres a chance that the crash fails, if that happends just re execute and
+                   add more to CrashAmmount
+                    Requirements:
+                    Any PC, 5 minutes, account has to be in a group (it doesnt matter the group)
+              ]]
+              
+              loadstring(game:HttpGet('https://raw.githubusercontent.com/GS21Official/Seller-Tools/main/GS21%20Dh%20Crash'))()
+OrionLib:MakeNotification({
+    Name = "Executed",
+    Content = "Successfully Executed",
+    Image = "rbxassetid://8950621656",
+    Time = 5
+})
+      end    
+})
+Main:AddButton({
+    Name = "Crash Stop",
+    Callback = function()
+              getgenv().fpsBoost = false
+              getgenv().Active = false --Toggle true or false
+              getgenv().CrashAmmount = 1500 --The more you add the better
+              --[[ Theres a chance that the crash fails, if that happends just re execute and
+                   add more to CrashAmmount
+                    Requirements:
+                    Any PC, 5 minutes, account has to be in a group (it doesnt matter the group)
+              ]]
+              
+              loadstring(game:HttpGet('https://raw.githubusercontent.com/GS21Official/Seller-Tools/main/GS21%20Dh%20Crash'))()
+OrionLib:MakeNotification({
+    Name = "Executed",
+    Content = "Successfully Executed",
+    Image = "rbxassetid://8950621656",
+    Time = 5
+})
+      end    
+})
+Main:AddButton({
+    Name = "Cash Droper",
+    Callback = function()
+              getgenv().fpsBoost = false
+              loadstring(game:HttpGet(("https://raw.githubusercontent.com/Raycodex/Exploiting/main/Roblox/Da%20Hood%20Auto%20Cash%20Drop"), true))()          
+OrionLib:MakeNotification({
+    Name = "Executed",
+    Content = "Successfully Executed",
+    Image = "rbxassetid://8950621656",
+    Time = 5
+})
+      end    
+})
